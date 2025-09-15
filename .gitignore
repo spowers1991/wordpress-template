@@ -1,0 +1,51 @@
+# WordPress core files (optional if you want to track them via Git)
+wp-admin/
+wp-includes/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs and debug files
+*.log
+*.sql
+*.sqlite
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Cache and temporary files
+wp-content/cache/
+wp-content/backups/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wflogs/
+wp-content/plugins/
+
+# Composer vendor directory (if using Composer)
+vendor/
+
+# Node modules (if using npm or yarn for theme/plugin development)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDE and editor files
+*.sublime-workspace
+*.sublime-project
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+
+# Backup and temporary files
+*.bak
+*.tmp
+*.old
+*.orig
+
+# Ignore sensitive files
+wp-config.php
