@@ -35,6 +35,9 @@ wp-content/themes/index.php
 # Composer vendor directory (if using Composer)
 vendor/
 
+# Webpack and build directories (if using a build process)
+wp-content/themes/wordpress-template-theme/dist
+
 # Remove language files if not needed
 wp-content/languages/
 
