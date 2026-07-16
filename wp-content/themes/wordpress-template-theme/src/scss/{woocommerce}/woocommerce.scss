@@ -1,0 +1,6 @@
+// woocommerce.php
+.woocommerce {
+    @import '{loop}/products.scss';
+    @import '{single-product}/single-product.scss';
+    @import '{woocommerce-pagination}/woocommerce-pagination.scss';
+}

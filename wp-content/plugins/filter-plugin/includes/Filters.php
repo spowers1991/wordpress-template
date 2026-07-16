@@ -4,20 +4,13 @@
         session_start();
     }
 
-    if (!function_exists('get_current_genre')) {
-        function get_current_genre() {
-            if (isset($_SESSION['selected_genre'])) {
-                return sanitize_text_field((string) $_SESSION['selected_genre']);
-            }
+    if (!function_exists('get_current_taxonomy_value')) {
+        function get_current_taxonomy_value($taxonomy) {
+            $taxonomy_key = sanitize_key((string) $taxonomy);
+            $session_key = 'selected_' . $taxonomy_key;
 
-            return '';
-        }
-    }
-
-    if (!function_exists('get_current_age')) {
-        function get_current_age() {
-            if (isset($_SESSION['selected_age'])) {
-                return sanitize_text_field((string) $_SESSION['selected_age']);
+            if (isset($_SESSION[$session_key])) {
+                return sanitize_text_field((string) $_SESSION[$session_key]);
             }
 
             return '';
@@ -61,15 +54,9 @@
             return $this->query;
         }
 
-        public static function output_current_genre() {
-            if (function_exists('get_current_genre')) {
-                echo esc_html(get_current_genre());
-            }
-        }
-
-        public static function output_current_age() {
-            if (function_exists('get_current_age')) {
-                echo esc_html(get_current_age());
+        public static function output_current_taxonomy($taxonomy) {
+            if (function_exists('get_current_taxonomy_value')) {
+                echo esc_html(get_current_taxonomy_value($taxonomy));
             }
         }
     }

@@ -23,10 +23,10 @@ global $post, $product;
 
 ?>
 <?php if ( $product->is_on_sale() ) : ?>
-    <div class="absolute bg-green-500 p-2">
-	    <?php echo apply_filters( 'woocommerce_sale_flash', '<span class="onsale text-white">' . esc_html__( 'Sale!', 'woocommerce' ) . '</span>', $post, $product ); ?>
-    </div>
-<?php
+
+	<?php echo apply_filters( 'woocommerce_sale_flash', '<span class="onsale">' . esc_html__( 'Sale!', 'woocommerce' ) . '</span>', $post, $product ); ?>
+
+	<?php
 endif;
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

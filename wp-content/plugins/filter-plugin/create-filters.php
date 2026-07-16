@@ -12,25 +12,22 @@ include_once(plugin_dir_path(__FILE__) . 'includes/Filters.php');
 
 // Ajax function
 function fm_create_filters() {
-    // Get the selected values from the AJAX request
-    $selected_genre = isset($_POST['genre']) ? sanitize_text_field($_POST['genre']) : '';
-    $selected_age = isset($_POST['age']) ? sanitize_text_field($_POST['age']) : '';
-
-    // Construct selected_options as an associative array
+    $post_type = 'movie';
     $selected_options = [];
+    $taxonomy_slugs = get_object_taxonomies($post_type, 'names');
 
-    // Add selected genre if not empty
-    if (!empty($selected_genre)) {
-        $selected_options['genre'] = [$selected_genre]; // Store as array
+    if (!empty($taxonomy_slugs)) {
+        foreach ($taxonomy_slugs as $taxonomy_slug) {
+            $selected_value = isset($_POST[$taxonomy_slug]) ? sanitize_text_field($_POST[$taxonomy_slug]) : '';
+
+            if (!empty($selected_value)) {
+                $selected_options[$taxonomy_slug] = [$selected_value];
+            }
+        }
     }
 
-    // Add selected age if not empty
-    if (!empty($selected_age)) {
-        $selected_options['age'] = [$selected_age]; // Store as array
-    }
-
-    // Create Filters instance with post type 'movie' and selected options
-    $filters = new \Filters('movie', $selected_options);
+    // Create Filters instance with selected options.
+    $filters = new \Filters($post_type, $selected_options);
 
     // Get the query results
     $query = $filters->get_query();

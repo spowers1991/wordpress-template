@@ -16,13 +16,17 @@ Thumbs.db
 .env.local
 .env.*.local
 
+# Plugins 
+
+wp-content/plugins/
+
 # Cache and temporary files
 wp-content/cache/
 wp-content/backups/
 wp-content/upgrade/
+wp-content/upgrade-temp-backup/
 wp-content/uploads/
 wp-content/wflogs/
-
 
 # Ignore specific files in the root and theme directories
 index.php

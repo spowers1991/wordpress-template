@@ -1,0 +1,227 @@
+[
+  {
+    "key": "post_type_movie",
+    "title": "Movies",
+    "menu_order": 0,
+    "active": true,
+    "post_type": "movie",
+    "advanced_configuration": false,
+    "import_source": "manual-json",
+    "import_date": "2026-07-16 00:00:00",
+    "labels": {
+      "name": "Movies",
+      "singular_name": "Movie",
+      "menu_name": "Movies"
+    },
+    "description": "",
+    "public": true,
+    "hierarchical": false,
+    "exclude_from_search": false,
+    "publicly_queryable": true,
+    "show_ui": true,
+    "show_in_menu": true,
+    "show_in_admin_bar": true,
+    "show_in_nav_menus": true,
+    "show_in_rest": true,
+    "rest_base": "",
+    "rest_namespace": "wp/v2",
+    "rest_controller_class": "WP_REST_Posts_Controller",
+    "menu_position": "",
+    "menu_icon": "dashicons-video-alt2",
+    "rename_capabilities": false,
+    "singular_capability_name": "post",
+    "plural_capability_name": "posts",
+    "supports": [
+      "title",
+      "editor",
+      "thumbnail"
+    ],
+    "enter_title_here": "Add movie title",
+    "rewrite": {
+      "permalink_rewrite": "post_type_key",
+      "with_front": "1",
+      "feeds": "0",
+      "pages": "1",
+      "slug": "movie"
+    },
+    "query_var": "post_type_key",
+    "query_var_name": "",
+    "can_export": true,
+    "delete_with_user": false,
+    "register_meta_box_cb": "",
+    "has_archive": true,
+    "has_archive_slug": "movies"
+  },
+  {
+    "key": "taxonomy_genre",
+    "title": "Genres",
+    "menu_order": 0,
+    "active": true,
+    "taxonomy": "genre",
+    "object_type": [
+      "movie"
+    ],
+    "advanced_configuration": 0,
+    "import_source": "manual-json",
+    "import_date": "2026-07-16 00:00:00",
+    "labels": {
+      "name": "Genres",
+      "singular_name": "Genre",
+      "menu_name": "Genres"
+    },
+    "description": "",
+    "public": true,
+    "publicly_queryable": true,
+    "hierarchical": false,
+    "show_ui": true,
+    "show_in_menu": true,
+    "show_in_nav_menus": true,
+    "show_in_rest": true,
+    "show_tagcloud": true,
+    "show_in_quick_edit": true,
+    "show_admin_column": false,
+    "rewrite": {
+      "permalink_rewrite": "taxonomy_key",
+      "slug": "genre",
+      "with_front": true,
+      "rewrite_hierarchical": false
+    },
+    "query_var": "taxonomy_key",
+    "query_var_name": ""
+  },
+  {
+    "key": "taxonomy_age",
+    "title": "Ages",
+    "menu_order": 0,
+    "active": true,
+    "taxonomy": "age",
+    "object_type": [
+      "movie"
+    ],
+    "advanced_configuration": 0,
+    "import_source": "manual-json",
+    "import_date": "2026-07-16 00:00:00",
+    "labels": {
+      "name": "Ages",
+      "singular_name": "Age",
+      "menu_name": "Ages"
+    },
+    "description": "",
+    "public": true,
+    "publicly_queryable": true,
+    "hierarchical": false,
+    "show_ui": true,
+    "show_in_menu": true,
+    "show_in_nav_menus": true,
+    "show_in_rest": true,
+    "show_tagcloud": true,
+    "show_in_quick_edit": true,
+    "show_admin_column": false,
+    "rewrite": {
+      "permalink_rewrite": "taxonomy_key",
+      "slug": "age",
+      "with_front": true,
+      "rewrite_hierarchical": false
+    },
+    "query_var": "taxonomy_key",
+    "query_var_name": ""
+  },
+  {
+    "key": "taxonomy_actor",
+    "title": "Actors",
+    "menu_order": 0,
+    "active": true,
+    "taxonomy": "actor",
+    "object_type": [
+      "movie"
+    ],
+    "advanced_configuration": 0,
+    "import_source": "manual-json",
+    "import_date": "2026-07-16 00:00:00",
+    "labels": {
+      "name": "Actors",
+      "singular_name": "Actor",
+      "menu_name": "Actors"
+    },
+    "description": "",
+    "public": true,
+    "publicly_queryable": true,
+    "hierarchical": false,
+    "show_ui": true,
+    "show_in_menu": true,
+    "show_in_nav_menus": true,
+    "show_in_rest": true,
+    "show_tagcloud": true,
+    "show_in_quick_edit": true,
+    "show_admin_column": false,
+    "rewrite": {
+      "permalink_rewrite": "taxonomy_key",
+      "slug": "actor",
+      "with_front": true,
+      "rewrite_hierarchical": false
+    },
+    "query_var": "taxonomy_key",
+    "query_var_name": ""
+  },
+  {
+    "key": "group_movie_additional_info",
+    "title": "Movie Additional Info",
+    "fields": [
+      {
+        "key": "field_movie_group",
+        "label": "Movie",
+        "name": "movie",
+        "type": "group",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "layout": "block",
+        "sub_fields": [
+          {
+            "key": "field_movie_additional_info",
+            "label": "Additional Info",
+            "name": "additional_info",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+          }
+        ]
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "movie"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1784160000
+  }
+]

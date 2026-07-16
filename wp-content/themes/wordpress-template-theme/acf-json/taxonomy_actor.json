@@ -1,0 +1,59 @@
+{
+    "key": "taxonomy_actor",
+    "title": "Actors",
+    "menu_order": 0,
+    "active": true,
+    "taxonomy": "actor",
+    "object_type": [
+        "movie"
+    ],
+    "advanced_configuration": 0,
+    "import_source": "manual-json",
+    "import_date": "2026-07-16 00:00:00",
+    "labels": {
+        "name": "Actors",
+        "singular_name": "Actor",
+        "menu_name": "Actors"
+    },
+    "description": "",
+    "capabilities": {
+        "manage_terms": "manage_categories",
+        "edit_terms": "manage_categories",
+        "delete_terms": "manage_categories",
+        "assign_terms": "edit_posts"
+    },
+    "public": true,
+    "publicly_queryable": true,
+    "hierarchical": false,
+    "show_ui": true,
+    "show_in_menu": true,
+    "show_in_nav_menus": true,
+    "show_in_rest": true,
+    "rest_base": "",
+    "rest_namespace": "wp\/v2",
+    "rest_controller_class": "WP_REST_Terms_Controller",
+    "show_tagcloud": true,
+    "show_in_quick_edit": true,
+    "show_admin_column": false,
+    "rewrite": {
+        "permalink_rewrite": "taxonomy_key",
+        "slug": "actor",
+        "with_front": true,
+        "rewrite_hierarchical": false
+    },
+    "query_var": "taxonomy_key",
+    "query_var_name": "",
+    "default_term": {
+        "default_term_enabled": false,
+        "default_term_name": "",
+        "default_term_slug": "",
+        "default_term_description": ""
+    },
+    "sort": null,
+    "meta_box": "default",
+    "meta_box_cb": "",
+    "meta_box_sanitize_cb": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1784197283
+}

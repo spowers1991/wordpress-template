@@ -493,17 +493,11 @@ video {
 .flex {
   display: flex;
 }
-.table {
-  display: table;
-}
 .grid {
   display: grid;
 }
 .hidden {
   display: none;
-}
-.\!w-full {
-  width: 100% !important;
 }
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -520,13 +514,6 @@ video {
 .border-b-2 {
   border-bottom-width: 2px;
 }
-.border-none {
-  border-style: none;
-}
-.bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
-}
 .p-2 {
   padding: 0.5rem;
 }
@@ -534,23 +521,8 @@ video {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 /* Theme imports */
 .theme-wordpress-template-theme header {
@@ -568,13 +540,23 @@ video {
 }
 
 /* Plugin imports */
+.woocommerce .products .onsale {
+  position: absolute;
+}
 .woocommerce .single-product .price {
   margin: 0px;
+}
+.woocommerce .single-product .onsale {
+  position: absolute;
 }
 .woocommerce .single-product .related {
   /* &.products {
        //background: #000;
    }*/
+}
+.woocommerce .woocommerce-pagination .page-numbers {
+  display: flex;
+  gap: 5px;
 }
 
 /*# sourceMappingURL=style.css.map*/

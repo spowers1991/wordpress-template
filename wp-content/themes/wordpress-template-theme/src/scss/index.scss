@@ -8,7 +8,7 @@ img {
 @tailwind utilities;
 
 /* Theme imports */
-@import 'theme/index';
+@import '{theme}/theme.scss';
 
 /* Plugin imports */
-@import 'woocommerce/index';
+@import '{woocommerce}/woocommerce.scss';
