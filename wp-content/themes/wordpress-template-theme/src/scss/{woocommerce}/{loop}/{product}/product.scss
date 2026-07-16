@@ -1,0 +1,6 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    
+    @import '{a}/a.scss';
+}

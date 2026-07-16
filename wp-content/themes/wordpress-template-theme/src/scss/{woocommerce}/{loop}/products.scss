@@ -1,3 +1,4 @@
 .products {
+    @import '{product}/product.scss';
     @import '{sale-flash}/onsale.scss';
 }
